@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Chivo Mono", monospace;
+  }
+  
+  html,
+  body {
+    font-size: 16px;
+    background-color: var(--white);
+    font-family: "Chivo Mono", monospace;
+    height: 100%;
+    width: 100%;
+  }
+  
+  :root {
+    --blue: #072357;
+    --white: #edf4f9;
+    --gray: #b1b6ba;
+    --blackgray: #222324;
+    --bluegray: #343c4b;
+    --yellow: #ffd203;
+    --lightgray: #d5dce0;
+  }
+  
+  .main-container{
+    height: 100%;
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+
+  .border{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--yellow);
+    height: 100%;
+    width: 100%;
+  }
+
+  .log-in{
+    width: 500px;
+    height: 280px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+input{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    border-top: none;
+    border-left: none;
+    border-right:none ;
+    border-bottom: 1px solid var(--yellow);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--blackgray);
+
+}
+
+input:focus{
+    background-color: rgba(7,35,87,0.3);
+}
+
+label{
+    margin-top: 15px
+}
+
+button{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px inset var(--blue);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+form h1{
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#logo{
+    color: var(--white);
+    font-size: 80px;
+   
+}  
+
+.logo-animate{
+    animation: 3s ease-in-out logo-animation;
+}
+
+.border-span{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+@keyframes logo-animation {
+    0%{
+        opacity: 0;
+        transform: translateX(-90px);
+    }  
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#logo-border{
+    border-bottom: 1px solid var(--lightgray);
+    width: 250px;
+    animation: 8s ease-in-out logo-border;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo-border {
+    0%{
+        opacity: 0;
+        transform: translateX(90px);
+    }
+
+    65%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    85%{
+        opacity: 0.5;
+        transform: translateX(-40px);
+    }
+
+    100%{
+        opacity: 0.1;
+        transform: translateX(-90px);
+    }
+}
